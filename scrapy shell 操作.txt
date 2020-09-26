@@ -1,0 +1,31 @@
+使用命令进入 scrapy shell "需要访问的地址"
+下载完后，url 的内容保存在 response 的变量中
+response.body
+response.headers
+response.headers['Server']
+response.xpath() 使用 xpath
+response.css() 使用 css 语法选取内容
+
+.使用 xpath 精确查找
+
+1.我们想找表格中的一个 a 标签
+
+response.xpath( "//table/tr/td/a" )
+
+2.//table 表示不管 table 在哪个标签的下面，找到所有的 table 标签
+
+3.这里 / 只是表示在哪个标签里，是谁的子标签，不一定是儿子标签，也包括孙子标签
+
+4.如果需要查找的页面有很多很多 a 标签，那么这样找，范围还是太宽了
+
+5.按标签属性查找：
+
+res_href = response.xpath( "//table/tr/td/a/@href" )
+
+这时候，我就可以找到所有 a 标签的链接，我们可以打印一下链接
+**for i in res_href : **
+print( i.extract() )
+6.按标签属性的值查找：
+
+例如：我们想要查找表格中一个 id = teacher 的一个列
+res_href = response.xpath( "//table/tr/td[@id='teacher']" )

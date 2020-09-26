@@ -1,0 +1,18 @@
+一维连续随机数：np.arange()  numpy就是做数组
+随机数组：np.random.___
+	浮点数：【0,1】 np.random.rand np.sample np.random_sample np.ranf np.random
+	多维：使用元组来表示多维数组
+	整数：【起始数，终点数】 np.randint
+	多维：使用size=（元组）
+	正态分布随机数： np.randn normalize--标准正态分布
+
+特殊数组：
+	多维：使用元组来表示多维数组
+	全0数组 np.zeors np.zeors_like
+	全1数组 np.ones np.ones_like
+	空  np.empty np.empty_like
+	对角线全1 np.eye,np.identity
+		区别：np.eye 可以不是方正，可以指定对角线方向，np.idenity只能是方阵
+
+等差数组：
+	np.linspace

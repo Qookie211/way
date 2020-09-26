@@ -1,0 +1,7 @@
+def parseCookie(string):
+    string = string.replace("document.cookie='", "")
+    clearance = string.split(';')[0]
+    return {clearance.split('=')[0]: clearance.split('=')[1]}
+
+# 将Cookie转换为字典格式
+cookie = parseCookie(cookie_str)

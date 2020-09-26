@@ -1,0 +1,11 @@
+判断网页的请求方式：
+根据Headers下的 Requests Method ：GET（或POST），来确定相应的请求方式
+对于GET，则调用get(url, params = data)方法
+对于POST, 则调用post(url, data = data)方法
+ 
+遇到“访问繁忙” and ”post”解决方法：
+从网页获得cookie进行访问 	
+urls 网页url not request_url
+session = requests.Session()
+session.get(urls,headers=headers,timeout=3)
+cookie =session.cookies

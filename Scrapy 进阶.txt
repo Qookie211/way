@@ -1,0 +1,16 @@
+pycharm 创建Scrapy项目
+创建一个scrapy项目：scrapy startproject test_scrapy
+生成一个爬虫：scrapy genspider itcast "itcast.cn
+
+Scrapy项目文件结构
+items.py 负责数据模型的建立，类似于实体类。
+middlewares.py 自己定义的中间件。
+pipelines.py 负责对spider返回数据的处理。 （管道文件）
+settings.py 负责对整个爬虫的配置。 （项目配置）
+spiders目录 负责存放继承自scrapy的爬虫类。（写代码的位置）
+scrapy.cfg scrapy基础配置
+
+
+CONCURRENT_REQUESTS = 16--开启线程数量，默认16，可以自行设置
+​ 这个参数涉及到scrapy爬取的并发量，items的处理速度
+DOWNLOAD_DELAY = 3 —下载延迟时间。下载器在下载同一个网站下一个页面前需要等待的时间。该选项可以用来限制爬取速度， 减轻服务器压力。(反爬策略之一)

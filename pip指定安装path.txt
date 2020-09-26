@@ -1,0 +1,2 @@
+six, python-dateutil, pytz, numpy, pandas
+pip install --target=C:\Users\DELL\AppData\Local\Programs\Python\Python36\site-packages pandas

@@ -1,0 +1,5 @@
+scrapy :
+setting 设置cookie  开关false
+items 编码需要的数据
+分析 网站分页url规律 根据规律更改编写spider的开始url  
+编写代码spider

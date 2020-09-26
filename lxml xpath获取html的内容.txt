@@ -1,0 +1,21 @@
+lxml 
+首先定义解析器：导入lxml的etree模块
+	parser = etree.HTMLParser(encoding='utf8')
+
+载入解析内容html：html = etree.parser('html文件',parser=parser)
+
+定位标签：//或/
+
+定位属性标签：[@属性]或者 [@属性=属性值]
+
+获得标签的属性值：//标签/@属性
+
+获得标签的内容：//标签/text()
+
+div[@属性="属性值"]
+
+//th[@class="common"]
+xpath获取节点属性值
+
+/@属性
+
